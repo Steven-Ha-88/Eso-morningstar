@@ -1,0 +1,42 @@
+.banner {
+width: 100vw;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: row nowrap;
+@media (max-width: 768px) {
+  flex-flow: column;
+  margin-top: -50px;
+}
+}
+
+.bannerHeading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column;
+  width: 60%;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 10px
+  }
+  h1 {
+    color: #002383;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 0px;
+  }
+  p {
+    font-family: Helvetica Neue, sans-serif;
+    padding: 0 20px;
+  }
+}
+
+.bannerImg {
+width: 100%;
+height: auto;
+padding: 60px;
+@media (max-width: 768px) {
+  padding: 5px;
+}
+}
