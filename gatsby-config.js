@@ -25,6 +25,14 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-source-youtube-v3`,
+      options: {
+        channelId:['UCoO9WEIu6UJLPp0Dmw0j3Yw'],
+        apiKey: process.env.API_KEY, // Optional for public requests
+        maxVideos: 10 // Defaults to 50
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
   ],

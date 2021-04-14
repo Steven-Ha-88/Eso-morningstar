@@ -1,13 +1,17 @@
 .banner {
 width: 100vw;
-min-height: 100vh;
+min-height: 70vh;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-flow: row nowrap;
+padding: 50px;
 @media (max-width: 768px) {
   flex-flow: column;
   margin-top: -50px;
+  min-height: 90vh;
+  padding: 10px;
+
 }
 }
 
@@ -22,21 +26,103 @@ flex-flow: row nowrap;
     padding: 10px
   }
   h1 {
-    color: #002383;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-bottom: 0px;
+    color: #1b1b7c;
+    font-family: Helvetica Neue, sans-serif;    margin-bottom: 0px;
+    text-align: start;
+    font-size: 40px;
+
   }
   p {
     font-family: Helvetica Neue, sans-serif;
-    padding: 0 20px;
+    font-size: 20px;
+    text-align: left;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: start;
+    a {
+      width: 75px;
+      height: auto;
+      background-color: #1b1b7c;
+      color: white;
+      border-radius: 5px;
+      display: inline-block;
+      line-height: 3;
+      margin-right: 20px;
+    }
   }
 }
 
 .bannerImg {
 width: 100%;
 height: auto;
-padding: 60px;
 @media (max-width: 768px) {
   padding: 5px;
 }
+}
+
+.homeText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column;
+  width: 100%;
+  margin-right: 40px;
+  color: white;
+  font-family: Helvetica Neue, sans-serif;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+    margin-right: 0px;
+  }
+  h1 {
+
+    font-size: 40px;
+    margin-bottom: 0px;
+    text-align: start;
+  }
+  p {
+    font-size: 20px;
+    text-align: left;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.homeImage {
+  width: 100%;
+  height: auto;
+  img{
+    padding: 25px;
+    // border-radius: 20px;
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
+  }
+  // @media (max-width: 768px) {
+  //   padding: 5px;
+  // }
+
+}
+
+.homeWrapper {
+  width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1b7c;
+  flex-flow: row nowrap;
+  padding: 50px;
+  @media (max-width: 768px) {
+    flex-flow: column;
+    margin-top: -50px;
+    min-height: 80vh;
+    padding: 10px;
+  
+  }
 }

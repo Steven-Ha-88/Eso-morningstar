@@ -1,7 +1,7 @@
 import React from "react"
 
 import Header from "./Nav/Navbar"
-import Footer from "./footer"
+import {Footer} from "./Footer/index"
 import "../styles/index.scss"
 import * as layoutStyles from "./layout.module.scss"
 

@@ -8,7 +8,7 @@ import Logo from "./Logo"
 const Navigation = styled.nav`
   height: auto;
   display: flex;
-  background: #e8e8e8;
+  background:#cacaca;
   justify-content: space-between;
   /* text-transform: uppercase; */
   /* border-bottom: 2px solid #33333320; */
@@ -147,22 +147,22 @@ const Navbar = () => {
                   "https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw"
                 }
                 download>
-                <i className='fab fa-youtube'></i>
+                <i aria-hidden className='fab fa-youtube'></i>
               </SocialLinks>
               <SocialLinks
                 color='pink'
                 href='https://www.instagram.com/animatestv/'>
-                <i className='fab fa-instagram'></i>
+                <i aria-hidden className='fab fa-instagram'></i>
               </SocialLinks>
               <SocialLinks
                 color='rgb(34,78,212)'
                 href='https://www.facebook.com/animatestv'>
-                <i className='fab fa-facebook'></i>
+                <i aria-hidden className='fab fa-facebook'></i>
               </SocialLinks>
               <SocialLinks
                 color='rgb(95 181 252)'
                 href='https://twitter.com/AniMatesTV_'>
-                <i className='fab fa-twitter'></i>
+                <i aria-hidden className='fab fa-twitter'></i>
               </SocialLinks>
             </Stack>
     </Navigation>
