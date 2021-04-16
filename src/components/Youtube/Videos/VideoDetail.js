@@ -16,7 +16,8 @@ const VideoDetail = ({ video }) => {
         justifyContent: "center",
         flexFlow: "column nowrap",
       }}>
-      <button className='latest-button'>Latest</button>
+      {/* <button className='latest-button'>Latest</button> */}
+      <h1 className="title">Latest</h1>
       <div className='ui embed'>
         <iframe
           allowFullScreen='allowFullScreen'

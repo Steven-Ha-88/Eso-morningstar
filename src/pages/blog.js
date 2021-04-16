@@ -23,6 +23,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
+      <div style={{padding: "50px"}}>
       <h1>Songs</h1>
       <ol className={blogStyles.posts}>
         {data.allContentfulHymns?.edges?.map(edge => {
@@ -35,6 +36,7 @@ const BlogPage = () => {
           )
         })}
       </ol>
+      </div>
     </Layout>
   )
 }

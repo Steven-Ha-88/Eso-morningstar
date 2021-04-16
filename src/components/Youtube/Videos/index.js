@@ -58,12 +58,13 @@ export const Videos = (props) => {
               <div
                 className='five wide column'
                 style={{ display: "flex", flexFlow: "column" }}>
-                <a
+                {/* <a
                   href='https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw'
                   className='latest-button'
                   style={{ alignSelf: "center", textAlign: "center" }}>
                   Videos{" "}
-                </a>
+                </a> */}
+                <h1 className="title">Videos</h1>
                 <VideoList onVideoSelect={onVideoSelect} videos={videos} />
               </div>
             </div>

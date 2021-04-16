@@ -32,7 +32,7 @@ const Blog = props => {
   return (
     <Layout>
       <Head title={props.data.contentfulHymns.title} />
-      <div style={{ whiteSpace: "pre-wrap", padding: "25px", textAlign: "center" }}>
+      <div style={{ fontSize: "20px", whiteSpace: "pre-wrap", padding: "25px", textAlign: "center" }}>
         <h1>{props.data.contentfulHymns.title}</h1>
         {documentToReactComponents(
           JSON.parse(props.data.contentfulHymns.body.raw)
