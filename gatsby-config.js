@@ -3,7 +3,12 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-console.log(process.env.CONTENTFUL_SPACE_ID)
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(process.env.NODE_ENV, "LOOOK HERE")
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -14,9 +19,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
@@ -29,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-youtube-v3`,
       options: {
         channelId:['UCoO9WEIu6UJLPp0Dmw0j3Yw'],
-        apiKey: process.env.API_KEY, // Optional for public requests
+        apiKey: process.env.GATSBY_API_KEY, // Optional for public requests
         maxVideos: 10 // Defaults to 50
       },
     },
