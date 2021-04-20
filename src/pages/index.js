@@ -6,6 +6,10 @@ import HomeComponent from './../components/HomeComponent'
 import Image from './../Images/esomorning/group_of_friends.png';
 import { Youtube } from './../components/Youtube/index';
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
+
+
 
 
 
@@ -17,9 +21,7 @@ const IndexPage = () => {
       node {
         title
         image {
-          file {
-            url
-          }
+         	 gatsbyImageData(layout: FULL_WIDTH)
         }
         description {
           description
@@ -45,7 +47,7 @@ console.log(data, "THIS IS DATA");
           </div>
         </div>
         <div className={indexStyles.bannerImg}>
-          <img src={Image} alt="Image of people"></img>
+          <StaticImage  placeholder="tracedSVG" src="./../Images/esomorning/group_of_friends.png" alt="A church window" />
         </div>
       </div>
       <HomeComponent data={data.allContentfulHome.edges[0]}/>

@@ -151,7 +151,7 @@ const Navbar = () => {
               </SocialLinks>
               <SocialLinks
                 color='pink'
-                href='https://www.instagram.com/animatestv/'>
+                href='https://www.instagram.com/morningstarldn/'>
                 <i aria-hidden className='fab fa-instagram'></i>
               </SocialLinks>
               <SocialLinks

@@ -12,7 +12,7 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
-  font-family: 'PT Sans', sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 20px;
 
   :after {

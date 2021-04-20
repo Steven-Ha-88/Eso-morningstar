@@ -1,8 +1,11 @@
 import React from 'react'
 import * as indexStyles from './../pages/home.module.scss';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 
 
 export default function HomeComponent({data, shrink}) {
+  const image = getImage(data.node)
   return (
     <div style={{minHeight: `${shrink ? '50vh' : null}`}}className={indexStyles.homeWrapper}>
       <div className={indexStyles.homeText}>
@@ -11,9 +14,10 @@ export default function HomeComponent({data, shrink}) {
       </div>
       <div>
         <div className={indexStyles.homeImage}>
-          <img src={`https:${data?.node?.image?.file?.url}`} alt={data.node.title} />
+          <GatsbyImage placeholder="blurred" image={image} alt={data.node.title} />
         </div>
       </div>
+  
     
     </div>
   )

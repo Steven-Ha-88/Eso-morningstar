@@ -6,10 +6,12 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: #fff0;
-  height: 100vh;
+  height: auto;
+  min-height: 120vh;
+  padding: 50px;
   @media (max-width: 780px) {
     padding: 0px;
-    height: 155vh;
+    min-height: 165vh;
   }
 `;
 

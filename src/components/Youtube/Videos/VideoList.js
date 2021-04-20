@@ -21,6 +21,7 @@ const VideoList = ({ videos, onVideoSelect }) => {
         alignItems: "center",
         margin: "0px",
         marginTop: "-2px",
+        marginBottom: "50px",
         height: "638px",
         overflow: "scroll",
       }}
