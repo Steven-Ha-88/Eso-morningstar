@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout";
+import Head from "../components/head";
 
 const AboutPage = () => {
   return (
@@ -14,7 +14,7 @@ const AboutPage = () => {
         <Link to="/contact">Want to work with me? Reach out.</Link>
       </p>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

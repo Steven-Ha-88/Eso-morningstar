@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
-import Header from "./Nav/Navbar"
-import {Footer} from "./Footer/index"
-import "../styles/index.scss"
-import * as layoutStyles from "./layout.module.scss"
+import Header from "./Nav/Navbar";
+import { Footer } from "./Footer/index";
+import "../styles/index.scss";
+import * as layoutStyles from "./layout.module.scss";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
@@ -14,7 +14,7 @@ const Layout = props => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

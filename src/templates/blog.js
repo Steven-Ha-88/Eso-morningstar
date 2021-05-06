@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Layout from "../components/layout";
+import Head from "../components/head";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 //slug is used from when we set the slug in context from the gatsby.node
 //must include export for gatsby to pick up query
@@ -16,9 +16,9 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 //graphql query gets passed down as props in blog component.
-const Blog = props => {
+const Blog = (props) => {
   // const options = {
   //   renderNode: {
   //     "embedded-asset-block": node => {
@@ -28,18 +28,25 @@ const Blog = props => {
   //     },
   //   },
   // }
-  console.log(props, "props")
+  console.log(props, "props");
   return (
     <Layout>
       <Head title={props.data.contentfulHymns.title} />
-      <div style={{ fontSize: "20px", whiteSpace: "pre-wrap", padding: "25px", textAlign: "center" }}>
+      <div
+        style={{
+          fontSize: "20px",
+          whiteSpace: "pre-wrap",
+          padding: "25px",
+          textAlign: "center",
+        }}
+      >
         <h1>{props.data.contentfulHymns.title}</h1>
         {documentToReactComponents(
           JSON.parse(props.data.contentfulHymns.body.raw)
         )}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

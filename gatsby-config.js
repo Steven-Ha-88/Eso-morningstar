@@ -5,15 +5,15 @@
  */
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
-console.log(process.env.NODE_ENV, "LOOOK HERE")
+console.log(process.env.NODE_ENV, "LOOOK HERE");
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Full-Stack Bootcamp",
-    author: "Andrew Mead",
+    title: "The ESO of the Morning Star",
+    author: "Steven Ha",
   },
   plugins: [
     {
@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -35,12 +36,12 @@ module.exports = {
     {
       resolve: `gatsby-source-youtube-v3`,
       options: {
-        channelId:['UCoO9WEIu6UJLPp0Dmw0j3Yw'],
+        channelId: ["UCoO9WEIu6UJLPp0Dmw0j3Yw"],
         apiKey: process.env.GATSBY_API_KEY, // Optional for public requests
-        maxVideos: 10 // Defaults to 50
+        maxVideos: 10, // Defaults to 50
       },
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
   ],
-}
+};

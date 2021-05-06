@@ -1,3 +1,5 @@
+
+
 .banner {
 width: 100vw;
 min-height: 70vh;
@@ -18,40 +20,66 @@ padding: 50px;
 .bannerHeading {
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   flex-flow: column;
-  width: 60%;
+  width: 80%;
+  
   @media (max-width: 768px) {
     width: 100%;
-    padding: 10px
+    padding: 10px;
+    text-align: center;
   }
   h1 {
     color: #1b1b7c;
-    font-family: Helvetica Neue, sans-serif;    margin-bottom: 0px;
-    text-align: start;
-    font-size: 40px;
-
+    font-family: 'Inter', sans-serif;    
+    margin-bottom: 0px;
+    font-size: 50px;
+    font-weight: 800;
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
   p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
-    text-align: left;
+    margin-right: 61px;
     @media (max-width: 768px) {
       font-size: 16px;
+      margin-right: 0px;
     }
   }
   div {
     display: flex;
     justify-content: start;
+    @media (max-width: 768px) {
+      justify-content: center;
+      flex-direction: column;
+    }
     a {
-      width: 75px;
-      height: auto;
-      background-color: #1b1b7c;
-      color: white;
-      border-radius: 5px;
-      display: inline-block;
-      line-height: 3;
-      margin-right: 20px;
+      display: inline-flex;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.1px;
+    font-weight: 600;
+    padding: 11px 31px;
+    height: 48px;
+    text-decoration: none!important;
+    color: #25282c;
+    background-color: #eceded;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: inherit;
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    transition: background .15s;
+    margin-right: 30px;
+    @media (max-width: 768px) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
     }
   }
 }
@@ -72,23 +100,31 @@ height: auto;
   width: 100%;
   margin-right: 40px;
   color: white;
-  font-family: Helvetica Neue, sans-serif;
+  font-family: 'Inter', sans-serif;
   @media (max-width: 768px) {
     width: 100%;
     padding: 10px;
     margin-right: 0px;
   }
   h1 {
-
-    font-size: 40px;
-    margin-bottom: 0px;
+    font-family: 'Inter', sans-serif;    
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 20px;
     text-align: start;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 42px;
+
+    }
   }
   p {
+    font-family: 'Inter', sans-serif;    
     font-size: 20px;
     text-align: left;
     @media (max-width: 768px) {
       font-size: 16px;
+      text-align: center;
     }
   }
 }
@@ -97,8 +133,9 @@ height: auto;
   width: 100%;
   height: auto;
   img{
+    margin: 0px;
     padding: 25px;
-    // border-radius: 20px;
+    border-radius: 50px;
     @media (max-width: 768px) {
       padding: 10px;
     }
@@ -115,14 +152,26 @@ height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1b1b7c;
   flex-flow: row nowrap;
   padding: 50px;
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(27, 27, 124, 0.856), 
+      rgba(27, 27, 124, 0.822)
+    ),
+    /* bottom, image */
+    url(./../Images/esomorning/about.jpeg);
   @media (max-width: 768px) {
     flex-flow: column;
     margin-top: -50px;
     min-height: 80vh;
-    padding: 10px;
+    padding: 25px;
   
   }
+}
+
+.container {
+  background: rgb(27,27,124);
+  background: linear-gradient(180deg, rgba(27,27,124,1) 12%, rgba(65,127,187,1) 100%);
 }

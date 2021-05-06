@@ -25,7 +25,8 @@ const VideoList = ({ videos, onVideoSelect }) => {
         height: "638px",
         overflow: "scroll",
       }}
-      className='ui relaxed divided list'>
+      className="ui relaxed divided list"
+    >
       {renderedList}
     </div>
   );

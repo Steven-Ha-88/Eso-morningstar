@@ -1,8 +1,8 @@
 // NavbarLinks.js
 
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
 const NavItem = styled(Link)`
   text-decoration: none;
@@ -12,8 +12,9 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
-  font-family: PT Sans, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
+  font-weight: 600;
 
   :after {
     position: absolute;
@@ -40,7 +41,7 @@ const NavItem = styled(Link)`
     font-size: 1.5rem;
     z-index: 6;
   }
-`
+`;
 const NavbarLinks = () => {
   return (
     <>
@@ -49,7 +50,7 @@ const NavbarLinks = () => {
       <NavItem to="/">Gallery</NavItem>
       <NavItem to="/404">Contact</NavItem>
     </>
-  )
-}
+  );
+};
 
-export default NavbarLinks
+export default NavbarLinks;

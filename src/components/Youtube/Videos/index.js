@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-
 
 export const Videos = (props) => {
   const [videos, setVideos] = useState([]);
@@ -11,53 +10,53 @@ export const Videos = (props) => {
   const [loading, setLoading] = useState(true);
 
   const data = useStaticQuery(graphql`
-        query {
-          allYoutubeVideo {
-            edges {
-              node {
-                title
-                description
-                thumbnail {
-                  url
-                }
-                id
-                videoId
-              }
+    query {
+      allYoutubeVideo {
+        edges {
+          node {
+            title
+            description
+            thumbnail {
+              url
             }
+            id
+            videoId
           }
         }
-
-`)
+      }
+    }
+  `);
 
   useEffect(() => {
     setVideos(data.allYoutubeVideo.edges.slice(1));
     setSelected(data.allYoutubeVideo.edges[0]);
     setLoading(false);
   }, []);
-  console.log(data, "this!")
+  console.log(data, "this!");
 
   const onVideoSelect = (video) => {
     setSelected(video);
   };
 
   return (
-    <div style={{height: "auto", overflow: "hidden"}}>
+    <div style={{ height: "auto", overflow: "hidden" }}>
       {loading ? (
-        <div className='loading-container'>
-          <div className='spinner-border text-primary' role='status'>
-            <span className='sr-only'>Loading...</span>
+        <div className="loading-container">
+          <div className="spinner-border text-primary" role="status">
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
       ) : (
-        <div className='ui container'>
-          <div className='ui stackable grid'>
-            <div className='ui row'>
-              <div className='eleven wide column'>
+        <div className="ui container">
+          <div className="ui stackable grid">
+            <div className="ui row">
+              <div className="eleven wide column">
                 <VideoDetail video={selectedVideo} />
               </div>
               <div
-                className='five wide column'
-                style={{ display: "flex", flexFlow: "column" }}>
+                className="five wide column"
+                style={{ display: "flex", flexFlow: "column" }}
+              >
                 {/* <a
                   href='https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw'
                   className='latest-button'

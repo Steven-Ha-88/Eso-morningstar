@@ -4,11 +4,11 @@
 
   width: 100%;
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .video-item{
     height: 210px;
   }
-}
+} */
 
 /* @media (max-width: 768px) {
   .video-item{

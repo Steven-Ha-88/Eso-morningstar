@@ -33,6 +33,7 @@
     "react-dom": "^16.8.6",
     "react-focus-lock": "^2.5.0",
     "react-icons": "^4.2.0",
+    "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed#v2.0.0",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
@@ -45,5 +46,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ]
   }
 }
